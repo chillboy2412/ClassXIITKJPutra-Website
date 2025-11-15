@@ -130,7 +130,7 @@ h2{font-family:'Merriweather',serif;font-size:1.8rem;color:#1d3c6a;margin-bottom
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:22px;
-  margin-top:20px;
+  margin-top:60px;
   padding:0 6px;
   justify-items:center; /* center cards inside the grid */
 }
@@ -395,4 +395,47 @@ footer{padding:24px;text-align:center;background:#0f274a;color:#fff;margin-top:2
   .audio-fab{width:46px;height:46px}
   .audio-panel{width:170px;bottom:66px}
   .student .photo{height:150px}
+}
+
+/* ===== ANDROID & MOBILE OPTIMIZATION ===== */
+/* 1 card per row on mobile/tablet with Android viewport */
+@media(max-width:768px) and (hover:none) and (pointer:coarse){
+  .students-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    max-width:100%;
+    padding:0;
+  }
+  .student{
+    max-width:100%;
+    width:100%;
+    margin:0;
+    padding-top:90px;
+    padding-bottom:20px;
+  }
+  .student .photo{
+    width:120px;
+    height:120px;
+    top:-60px;
+  }
+}
+
+/* For very small screens (portrait mobile) */
+@media(max-width:480px){
+  .students-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+    padding:0;
+  }
+  .student{
+    max-width:100%;
+    width:100%;
+    padding-top:80px;
+    padding-bottom:20px;
+  }
+  .student .photo{
+    width:100px;
+    height:100px;
+    top:-50px;
+  }
 }
