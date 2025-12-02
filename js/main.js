@@ -515,4 +515,29 @@
   };
 
 })();
+/* Komentar */
+index  saveComments();
+  renderComments();
 
+  document.getElementById("name").value = "";
+  document.getElementById("message").value = "";
+}
+
+function showReplyForm(index) {
+  document.getElementById(`reply-form-${index}`).style.display = "block";
+}
+
+function addReply(index) {
+  const name = document.getElementById(`reply-name-${index}`).value;
+  const message = document.getElementById(`reply-message-${index}`).value;
+
+  if (!name || !message) return alert("Isi dulu semuanya!");
+
+  const time = new Date().toLocaleString("id-ID");
+
+  comments[index].replies.push({ name, message, time });
+  saveComments();
+  renderComments();
+}
+
+renderComments();
