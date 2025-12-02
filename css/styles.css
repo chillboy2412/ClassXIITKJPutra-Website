@@ -439,3 +439,32 @@ footer{padding:24px;text-align:center;background:#0f274a;color:#fff;margin-top:2
     top:-50px;
   }
 }
+
+/* =====Komentar===== */
+.comment-section {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.comment {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 3px solid #3498db;
+}
+
+.reply-box {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.reply-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 14px;
+}
